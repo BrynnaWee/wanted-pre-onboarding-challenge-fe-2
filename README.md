@@ -2,6 +2,9 @@
 wanted-pre-onboarding-challenge-fe-2
 https://jsdoc.app/
 
+# jsdoc ./src
+# npm run jsdoc
+
 
 ## 챌린지 과제 가이드
 

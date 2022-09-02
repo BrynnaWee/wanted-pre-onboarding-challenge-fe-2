@@ -2,7 +2,17 @@
 
 /**
  * @typedef {Array<String>} TAG_PROPS
- * @typedef {{id:number,text:String,cate:String,tags:TAG_PROPS,isDone:Boolean}} TODOITEM_PROPS
+ */
+
+/**
+ * Todo Item Props setting
+ * @typedef {Object} TODOITEM_PROPS
+ * @property {Number} id
+ * @property {String} [text]
+ * @property {String} [cate]
+ * @property {TAG_PROPS} [tags]
+ * @property {Boolean} [isDone]
+ * 
  */
 
 
@@ -18,6 +28,7 @@ class TodoList {
     }
 
     /**
+     * create Todo Item.
      * @param {String} [text] 
      * @param {String} [cate]
      * @param {Array} [tags]
@@ -30,57 +41,67 @@ class TodoList {
     }
 
     /**
-     * get todo item's with id
+     * get one todo item's with id
      * 
-     * @param {number} [targetId] 
-     * @returns {TODOITEM_PROPS|Array<TODOITEM_PROPS>|null}
+     * @param {Number} [targetId] 
+     * @returns {TODOITEM_PROPS|null}
      */
 
-    read(targetId){
-
-        if(targetId) {
-            const getItem = this.items.filter(item => item.id === targetId);
-
-            if(getItem){
-                return {
-                    // @ts-ignore
-                    id:getItem.myId,
-                    // @ts-ignore
-                    text:getItem.myText,
-                    // @ts-ignore
-                    cate:getItem.myCate,
-                    // @ts-ignore
-                    tags:getItem.myTags,
-                    // @ts-ignore
-                    isDone:getItem.isDone
-         
-                }
-            }else {
-                return null 
+    readItem (targetId){      
+        const getItem = this.items.filter(item => item.id === targetId);
+        if(getItem){
+            return {
+                // @ts-ignore
+                id:getItem.myId,
+                // @ts-ignore
+                text:getItem.myText,
+                // @ts-ignore
+                cate:getItem.myCate,
+                // @ts-ignore
+                tags:getItem.myTags,
+                // @ts-ignore
+                isDone:getItem.isDone        
             }
-
-        }else{
-            const setArr = [];
-            this.items.forEach(item => {
-                setArr.push({
-                    id:item.myId,
-                    text:item.myText,
-                    cate:item.myCate,
-                    tags:item.myTags,
-                    isDone:item.isDone
-                });
-            });
-
-            return setArr;
+        }else {
+            return null 
         }
     }
+
+
+    /**
+     * get all todo Items
+     * 
+     * @returns {Array<TODOITEM_PROPS>}
+     */
+
+    readItemAll (){ 
+        const setArr = [];
+        this.items.forEach(item => {
+            setArr.push({
+                id:item.myId,
+                text:item.myText,
+                cate:item.myCate,
+                tags:item.myTags,
+                isDone:item.isDone
+            });
+        });
+
+        return setArr;
+    }
+
+
+    updateItem (id, text, cate, tags){
+
+    }
+
+
 }
 
 
- /**
+/**
  * Todo item
  * @constructor
- * @param {number} id - todo items's id
+ * @param {Number} id - todo items's id
  * @param {String} [text] - todo item's content
  * @param {String} [cate] - todo item's category
  * @param {Array} [tags] - todo item's tags array
