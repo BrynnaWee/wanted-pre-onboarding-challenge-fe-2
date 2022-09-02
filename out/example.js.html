@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: test.js</title>
+    <title>JSDoc: Source: example.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: test.js</h1>
+    <h1 class="page-title">Source: example.js</h1>
 
     
 
@@ -27,16 +27,56 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @author Brynna We &lt;brynna.we@gmail.com>
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
  */
+ function Book(title, author) {}
 
-
-/**
- * 테스트를 위한 함수입니다.
- */
-function MyClass01(){
-
-}</code></pre>
+ /**
+  * Both of these will link to the bar function.
+  * @see {@link bar}
+  * @see bar
+  */
+ function foo() {}
+ 
+ // Use the inline {@link} tag to include a link within a free-form description.
+ /**
+  * @see {@link foo} for further information.
+  * @see {@link http://github.com|GitHub}
+  */
+ function bar() {}
+ 
+ /**
+  * Generic dairy product.
+  * @constructor
+  */
+ function DairyProduct() {}
+ 
+ /**
+  * Check whether the dairy product is solid at room temperature.
+  * @abstract
+  * @return {boolean}
+  */
+ DairyProduct.prototype.isSolid = function () {
+     throw new Error('must be implemented by subclass!');
+ };
+ 
+ /**
+  * Cool, refreshing milk.
+  * @constructor
+  * @augments DairyProduct
+  */
+ function Milk() {}
+ 
+ /**
+  * Check whether milk is solid at room temperature.
+  * @return {boolean} Always returns false.
+  */
+ Milk.prototype.isSolid = function () {
+     return false;
+ };</code></pre>
         </article>
     </section>
 
