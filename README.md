@@ -1,7 +1,12 @@
 # 프리온보딩 챌린지 2차 과제 페이지
-wanted-pre-onboarding-challenge-fe-2
+wanted-pre-onboarding-challenge-fe-2  
 
-### 과제물 JSDoc page ([🔗링크](https://brynnawee.github.io/wanted-pre-onboarding-challenge-fe-2/))
+
+
+### 과제물 JSDoc page ([🔗링크](https://brynnawee.github.io/wanted-pre-onboarding-challenge-fe-2/))  
+
+***  
+
 
 ## Usage of JSDoc
 - https://jsdoc.app/
@@ -10,6 +15,10 @@ wanted-pre-onboarding-challenge-fe-2
 - jsdoc ./src
 - npm run jsdoc
 ```
+
+  
+
+
 
 ## 챌린지 과제 가이드
 
