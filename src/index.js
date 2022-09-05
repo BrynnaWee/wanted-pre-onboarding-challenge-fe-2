@@ -1,6 +1,12 @@
 //@ts-check
 
 /**
+ * @author Brynna We <brynna.we@gmail.com>
+ */
+
+
+
+/**
  * @typedef {Array<String>} TAG_PROPS
  */
 

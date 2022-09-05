@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "src/index.js",
 	"scripts": {
-		"docs": "jsdoc -c jsdoc.json"
+		"docs": "jsdoc -c jsdoc.config.json README.md"
 	},
 	"devDependencies": {
 		"docdash": "^1.2.0",
