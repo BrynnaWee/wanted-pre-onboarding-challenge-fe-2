@@ -4,9 +4,11 @@ wanted-pre-onboarding-challenge-fe-2
 
 ## Usage of JSDoc
 - https://jsdoc.app/
+
+```bash
 - jsdoc ./src
 - npm run jsdoc
-
+```
 
 ## 챌린지 과제 가이드
 
