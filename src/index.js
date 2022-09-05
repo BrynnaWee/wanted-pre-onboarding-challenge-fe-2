@@ -41,7 +41,7 @@ class TodoList {
     }
 
     /**
-     * get one todo item's with id
+     * get specific item
      * 
      * @param {Number} [targetId] 
      * @returns {TODOITEM_PROPS|null}
@@ -88,9 +88,10 @@ class TodoList {
 
         return setArr;
     }
+    
 
     /**
-     * 
+     * update specific item
      * @param {String} id 
      * @param {String} prop 
      * @param {String|Array} value 
@@ -106,6 +107,40 @@ class TodoList {
         //const getItem:TODOITEM_PROPS 처럼...
 
         getItem[0].update(prop, value);
+    }
+
+
+    /**
+     * delete selected item
+     * @param {String} id 
+     */
+    deleteItem (id){
+
+    }
+
+    /**
+     * delete all items
+     */
+    deleteItemAll (){
+        
+    }
+
+    /**
+     * delete selected tag from specific Item.
+     * @param {String} id 
+     * @param {String} value 
+     */
+    deleteTag(id,value){
+
+    }
+
+    /**
+     * delete all tag from specific Item.
+     * @param {String} id 
+     */
+
+    deleteTagAll(id){
+
     }
 
 
