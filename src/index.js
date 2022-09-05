@@ -89,9 +89,23 @@ class TodoList {
         return setArr;
     }
 
+    /**
+     * 
+     * @param {String} id 
+     * @param {String} prop 
+     * @param {String|Array} value 
+     */
+    updateItem (id, prop, value){
 
-    updateItem (id, text, cate, tags){
+        /**
+         * @typedef {TODOITEM_PROPS} 
+         * @param {TODOITEM_PROPS} item
+         * */
+        const getItem = this.items.filter(item => item.id === id);
+        //이경우에 js파일에서는 getItem의 타입을 어떻게 정의할 수 있는지?
+        //const getItem:TODOITEM_PROPS 처럼...
 
+        getItem[0].update(prop, value);
     }
 
 

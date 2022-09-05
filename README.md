@@ -13,7 +13,7 @@ wanted-pre-onboarding-challenge-fe-2
 
 ```bash
 - jsdoc ./src
-- npm run jsdoc
+- npm run docs
 ```
 
   
